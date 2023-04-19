@@ -48,7 +48,7 @@ const Header = ({ socials }: Props) => {
           fgColor="gray"
           bgColor="transparent"
         />
-        <a href="#contact">Get in touch eee</a>
+        <a href="#contact">Get in touch</a>
         {/* <p className="uppercase hidden md:inline-flex text-sm text-gray-500">
           Get in touch
         </p> */}
