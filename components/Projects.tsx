@@ -13,7 +13,7 @@ const Projects = ({ projects }: Props) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1.2 }}
-      className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+      className=" relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
       <h3 className="absolute top-16 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
