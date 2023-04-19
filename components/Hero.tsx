@@ -7,31 +7,35 @@ import { PageInfo } from '../typings'
 import { urlFor } from '../sanity'
 
 type Props = {
-  pageInfo: PageInfo
+  pageInfo: PageInfo[]
 }
 
 const Hero = ({ pageInfo }: Props) => {
   const [text, count] = useTypewriter({
     // words: ['Hi, I am Shahid', 'Enjoy-Coffee.tsx', '<LoveToCode/>'],
-    words: [`Hi, I am ${pageInfo?.name}`, 'Enjoy-Coffee.tsx', '<LoveToCode/>'],
+    words: [
+      `Hi, I am ${pageInfo[0]?.name}`,
+      'Enjoy-Coffee.tsx',
+      '<LoveToCode/>',
+    ],
     loop: true,
     delaySpeed: 2000,
   })
 
-  console.log('page INFO', pageInfo)
+  // console.log('page INFO', pageInfo.name)
 
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
       <img
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src={urlFor(pageInfo?.heroImage).url()} //ImageUrlBuilder.url()
+        src={urlFor(pageInfo[0]?.heroImage).url()} //ImageUrlBuilder.url()
         alt="Shahid"
       />
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           {/* Software Developer */}
-          {pageInfo?.role}
+          {pageInfo[0]?.role}
         </h2>
         <h1 className="text-5xl lg:text-5xl font-semibold px-10">
           <span className="mr-3">{text}</span>

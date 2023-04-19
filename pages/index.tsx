@@ -17,7 +17,7 @@ import { fetchProjects } from '../utils/fetchProjects'
 import { fetchSocials } from '../utils/fetchSocials'
 
 type Props = {
-  pageInfo: PageInfo
+  pageInfo: PageInfo[]
   experiences: Experience[]
   skills: Skill[]
   projects: Project[]
@@ -25,10 +25,13 @@ type Props = {
 }
 
 const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
+  console.log('INDEX PAGE')
+  console.dir(pageInfo[0].name)
+
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#178fe6]">
       <Head>
-        <title>{`${pageInfo?.name}'s Portfolio`}</title>
+        <title>{`${pageInfo[0]?.name}'s Portfolio`}</title>
       </Head>
 
       <Header socials={socials} />
@@ -38,7 +41,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
       </section>
 
       <section id="about" className="snap-center">
-        <About pageInfo={pageInfo} />
+        <About pageInfo={pageInfo[0]} />
       </section>
 
       <section id="experience" className="snap-center">
@@ -77,7 +80,7 @@ export default Home
 
 //get static props
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await fetchPageInfo()
+  const pageInfo: PageInfo[] = await fetchPageInfo()
   const experiences: Experience[] = await fetchExperiences()
   const skills: Skill[] = await fetchSkills()
   const projects: Project[] = await fetchProjects()
