@@ -4,12 +4,6 @@
   "extends": ["next/babel", "next/core-web-vitals"],
   "rules": {
     // Your custom rules here
+    // additional rules or overrides
   }
 }
-
-// {
-//   "extends": ["next/babel"],
-//   "rules": {
-//     // additional rules or overrides
-//   }
-// }

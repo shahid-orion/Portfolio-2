@@ -10,48 +10,41 @@ type Props = {
 
 const ExperienceCard = ({ experience }: Props) => {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-10 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-100 transition-opacity duration-200 overflow-hidden cursor-pointer">
+    <article
+      // className="w-32 h-32 rounded-full xl:w-[200px] xl:h=[200px] object-cover object-center"
+      className="top-8 md:top-15 flex flex-col relative h-screen text-center md:text-left max-w-7xl px-10 justify-evenly mx-auto items-center"
+      // className="flex flex-col relative h-screen md:flex-row w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100 transition-opacity duration-200 overflow-hidden cursor-pointer"
+    >
       <motion.img
         initial={{ y: -100, opacity: 0 }}
         transition={{ duration: 1.2 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
-        className="w-22 h-22 rounded object-cover object-center mt-20"
+        // className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+        className="w-12 h-12 md:w-32 md:h-32 rounded object-cover object-center mt-20"
         src={urlFor(experience.companyImage).url()} //ImageUrlBuilder.url()
-        // src="https://ebix.com.au/wp-content/uploads/2021/04/ebix-logo-white.svg"
         alt=""
       />
 
       <div className="px-0 md:px-10 space-y-2">
-        <h4 className="text-4xl font-light">{experience.jobTitle}</h4>
+        <h4 className="text-xl md:text-4xl font-light">
+          {experience.jobTitle}
+        </h4>
         {/* <h4 className="text-4xl font-light">Junior Developer</h4> */}
         <p className="font-bold text-2xl mt-1">{experience.company}</p>
         {/* <p className="font-bold text-2xl mt-1">Ebix Australia</p> */}
-        <div className="flex space-x-2">
+        <div
+          className="flex space-x-2 my-2 items-center justify-end md:justify-center"
+          // className="flex space-x-2"
+        >
           {experience.technologies.map((tech) => (
             <img
               key={tech._id}
               className="h-10 w-10 rounded-full ml-20"
               src={urlFor(tech.image).url()}
-              // src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg"
               alt="Ebix"
             />
           ))}
-          {/* <img
-            className="h-10 w-10 rounded-full"
-            src="https://cdn.worldvectorlogo.com/logos/react-1.svg"
-            alt="Ebix"
-          />
-          <img
-            className="h-10 w-10 rounded-full"
-            src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg"
-            alt="Ebix"
-          />
-          <img
-            className="h-10 w-10 rounded-full"
-            src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg"
-            alt="Ebix"
-          /> */}
         </div>
         <p className="uppercase py-5 text-gray-300">
           {new Date(experience.dateStarted).toDateString()} -{' '}
@@ -64,11 +57,6 @@ const ExperienceCard = ({ experience }: Props) => {
           {experience.points.map((point, i) => (
             <li key={i}>{point}</li>
           ))}
-          {/* <li>Summery Point</li>
-          <li>Summery Point</li>
-          <li>Summery Point</li>
-          <li>Summery Point</li>
-          <li>Summery Point</li> */}
         </ul>
       </div>
     </article>

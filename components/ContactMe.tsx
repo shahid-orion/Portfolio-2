@@ -34,24 +34,19 @@ const ContactMe = (props: Props) => {
         Contact
       </h3>
 
-      <div className="flex flex-col space-y-10">
-        {/* <h4 className="text-4xl font-semibold text-center">
-          I have got just what you need. {''}
-          <span className="decoration-[#F7AB0A]/50 underline">Let's Talk</span>
-        </h4> */}
-
+      <div className="flex flex-col space-y-10 mt-20">
         <div className="space-y-5">
           <div className="flex items-center space-x-5 justify-center">
             <DevicePhoneMobileIcon className="text-[#178fe6] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">+610421565952</p>
+            <p className="text-xl md:text-2xl">+610421565952</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#178fe6] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">Sydney, Australia</p>
+            <p className="text-xl md:text-2xl">Sydney, Australia</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#178fe6] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">sroutfit@gmail.com</p>
+            <p className="text-xl md:text-2xl">sroutfit@gmail.com</p>
           </div>
         </div>
 
@@ -59,18 +54,21 @@ const ContactMe = (props: Props) => {
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col space-y-2 w-fit mx-auto"
         >
-          <div className="flex space-x-2">
+          <div
+            className="flex-col md:flex-row md:space-x-2 space-y-2 w-80 md:w-fit"
+            // className="flex space-x-2"
+          >
             <input
               {...register('name')}
               placeholder="Name"
-              className="contactInput"
+              className="contactInput w-80"
               type="text"
               required
             />
             <input
               {...register('email')}
               placeholder="email"
-              className="contactInput"
+              className="contactInput w-80"
               type="email"
               required
             />
