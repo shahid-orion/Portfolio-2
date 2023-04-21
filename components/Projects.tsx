@@ -21,7 +21,7 @@ const Projects = ({ projects }: Props) => {
       </h3>
 
       <div
-        className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#178fe6]"
+        className="relative mt-20 md:mt-0 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#178fe6]"
         // className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#178fe6]"
       >
         {projects.map((project, i) => (
@@ -31,7 +31,7 @@ const Projects = ({ projects }: Props) => {
             // className="w-screen mt-8 flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
           >
             <motion.img
-              initial={{ y: -150, opacity: 0 }}
+              initial={{ y: -70, opacity: 0 }}
               transition={{ duration: 1.2 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
