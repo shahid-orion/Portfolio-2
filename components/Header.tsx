@@ -29,7 +29,8 @@ const Header = ({ socials }: Props) => {
             key={social._id}
             url={social.url}
             // url="https://twitter.com/jaketrent"
-            fgColor="gray"
+            fgColor="#f7faf9"
+            // fgColor="gray"
             bgColor="transparent"
           />
         ))}
@@ -42,13 +43,23 @@ const Header = ({ socials }: Props) => {
         transition={{ duration: 1.5 }}
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
-        <SocialIcon
+        {/* <SocialIcon
           className="cursor-pointer"
           network="email"
-          fgColor="gray"
+          fgColor="#F0A80A"
+          // fgColor="gray"
           bgColor="transparent"
-        />
-        <a href="#contact">Get in touch</a>
+        /> */}
+        <a href="#contact" className="text-[#f7faf9]">
+          <SocialIcon
+            className="cursor-pointer"
+            network="email"
+            fgColor="#f7faf9"
+            // fgColor="gray"
+            bgColor="transparent"
+          />
+          Get in touch
+        </a>
         {/* <p className="uppercase hidden md:inline-flex text-sm text-gray-500">
           Get in touch
         </p> */}
