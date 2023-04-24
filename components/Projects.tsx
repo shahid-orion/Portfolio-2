@@ -30,18 +30,22 @@ const Projects = ({ projects }: Props) => {
             className="w-screen flex-shrink-0 snap-center snap-mandatory flex flex-col overflow-y-scroll space-y-5 items-center justify-center p-20 md:p-44 h-screen"
             // className="w-screen mt-8 flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
           >
-            <motion.img
-              initial={{ y: -70, opacity: 0 }}
-              transition={{ duration: 1.2 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              src={urlFor(project?.image).url()} //ImageUrlBuilder.url()
-              alt=""
-              className="h-30 md:h-40"
-            />
+            <a href={project.linkToBuild}>
+              <motion.img
+                initial={{ y: -70, opacity: 0 }}
+                transition={{ duration: 1.2 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                src={urlFor(project?.image).url()} //ImageUrlBuilder.url()
+                alt=""
+                className="h-30 md:h-40"
+              />
+            </a>
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-2xl md:text-4xl font-semibold text-center">
-                {project.title}
+                <a className=" hover:text-blue-200" href={project.linkToBuild}>
+                  {project.title}
+                </a>
               </h4>
 
               <div className="flex items-center space-y-2 justify-center">
