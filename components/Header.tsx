@@ -41,23 +41,15 @@ const Header = ({ socials }: Props) => {
         initial={{ x: 500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 1.5 }}
-        className="flex flex-row items-center text-gray-300 cursor-pointer"
+        className="flex flex-row items-center text-[#f7faf9] cursor-pointer"
       >
-        {/* <SocialIcon
+        <SocialIcon
           className="cursor-pointer"
           network="email"
-          fgColor="#F0A80A"
-          // fgColor="gray"
+          fgColor="#f7faf9"
           bgColor="transparent"
-        /> */}
+        />
         <a href="#contact" className="text-[#f7faf9]">
-          <SocialIcon
-            className="cursor-pointer"
-            network="email"
-            fgColor="#f7faf9"
-            // fgColor="gray"
-            bgColor="transparent"
-          />
           Get in touch
         </a>
         {/* <p className="uppercase hidden md:inline-flex text-sm text-gray-500">
