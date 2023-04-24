@@ -21,7 +21,7 @@ const Projects = ({ projects }: Props) => {
       </h3>
 
       <div
-        className="relative mt-20 md:mt-0 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#178fe6]"
+        className="relative mt-20 md:mt-0 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar-thin md:scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#178fe6]"
         // className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#178fe6]"
       >
         {projects.map((project, i) => (
