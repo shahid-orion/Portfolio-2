@@ -43,7 +43,7 @@ const Projects = ({ projects }: Props) => {
             </a>
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-2xl md:text-4xl font-semibold text-center">
-                <a className=" hover:text-blue-200" href={project.linkToBuild}>
+                <a className=" hover:text-[#178fe6]" href={project.linkToBuild}>
                   {project.title}
                 </a>
               </h4>
