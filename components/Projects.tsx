@@ -38,7 +38,7 @@ const Projects = ({ projects }: Props) => {
                 viewport={{ once: true }}
                 src={urlFor(project?.image).url()} //ImageUrlBuilder.url()
                 alt=""
-                className="h-30 md:h-40"
+                className="h-30 md:h-40 rounded-lg"
               />
             </a>
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
@@ -51,7 +51,8 @@ const Projects = ({ projects }: Props) => {
               <div className="flex items-center space-y-2 justify-center">
                 {project?.technologies.map((tech) => (
                   <img
-                    className="w-10 h-10"
+                    // className="w-10 h-10"
+                    className="h-10 w-10 rounded-full md:ml-10"
                     key={tech._id}
                     src={urlFor(tech.image).url()}
                     alt=""
