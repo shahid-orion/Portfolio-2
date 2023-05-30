@@ -30,7 +30,7 @@ const Projects = ({ projects }: Props) => {
             className="w-screen flex-shrink-0 snap-center snap-mandatory flex flex-col overflow-y-scroll space-y-5 items-center justify-center p-20 md:p-44 h-screen"
             // className="w-screen mt-8 flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
           >
-            <a href={project.linkToBuild}>
+            <a href={project.linkToBuild} target="_blank" rel="noopener">
               <motion.img
                 initial={{ y: -70, opacity: 0 }}
                 transition={{ duration: 1.2 }}
