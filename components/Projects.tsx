@@ -6,7 +6,7 @@ import Link from 'next/link'
 type Props = {
   projects: Project[]
 }
-
+//delete
 function Projects({ projects }: Props) {
   return (
     <motion.div
