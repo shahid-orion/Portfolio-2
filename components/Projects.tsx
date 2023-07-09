@@ -46,9 +46,9 @@ function Projects({ projects }: Props) {
 
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
-                <span className="decoration-[#178fe6]/50 underline text-[#178fe6]">
+                {/* <span className="decoration-[#178fe6]/50 underline text-[#178fe6]">
                   Project {i + 1} of {projects.length} :
-                </span>{' '}
+                </span>{' '} */}
                 {project.title}
               </h4>
 
