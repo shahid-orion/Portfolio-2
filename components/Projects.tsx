@@ -45,10 +45,10 @@ function Projects({ projects }: Props) {
             </Link>
 
             <div className="space-y-2 md:space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
-                {/* <span className="decoration-[#178fe6]/50 underline text-[#178fe6]">
-                  Project {i + 1} of {projects.length} :
-                </span>{' '} */}
+              <h4 className="text-2xl md:text-4xl font-semibold text-center">
+                <span className="decoration-[#178fe6]/50 underline text-[#178fe6]">
+                  Project {i + 1} of {projects.length}:
+                </span>{' '}
                 {project.title}
               </h4>
 
