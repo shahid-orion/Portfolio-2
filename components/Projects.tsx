@@ -16,7 +16,7 @@ function Projects({ projects }: Props) {
       className="flex relative overflow-hidden flex-col text-left md:flex-row max-w-full 
       h-screen justify-evenly mx-auto items-center z-0"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 md:top-16 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
 
@@ -28,7 +28,7 @@ function Projects({ projects }: Props) {
           <motion.div
             key={project._id}
             className="w-screen flex flex-col space-y-5 items-center justify-center 
-            flex-shrink-0 snap-center p-20 md:p-44 h-screen"
+            flex-shrink-0 snap-center p-5 md:p-44 h-screen"
           >
             <Link key={project._id} href={project.linkToBuild} target="_blank">
               <motion.img
@@ -44,7 +44,7 @@ function Projects({ projects }: Props) {
               />
             </Link>
 
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
+            <div className="space-y-2 md:space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
                 {/* <span className="decoration-[#178fe6]/50 underline text-[#178fe6]">
                   Project {i + 1} of {projects.length} :
@@ -52,7 +52,7 @@ function Projects({ projects }: Props) {
                 {project.title}
               </h4>
 
-              <p className="text-lg text-center md:text-left">
+              <p className="text-lg md:text-2xl text-center md:text-left">
                 {project.summary}
               </p>
             </div>
