@@ -14,21 +14,16 @@ const Projects = ({ projects }: Props) => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1.2 }}
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center"
-      // className=" relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
       <h3 className="absolute top-10 md:top-16 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
 
-      <div
-        className="relative mt-20 md:mt-0 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar-thin md:scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#178fe6]"
-        // className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#178fe6]"
-      >
+      <div className="relative mt-20 md:mt-0 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar-thin md:scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#178fe6]">
         {projects.map((project, i) => (
           <div
             key={project._id}
             className="w-screen flex-shrink-0 snap-center snap-mandatory flex flex-col overflow-y-scroll space-y-5 items-center justify-center p-20 md:p-44 h-screen"
-            // className="w-screen mt-8 flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
           >
             <a href={project.linkToBuild} target="_blank" rel="noopener">
               <motion.img
