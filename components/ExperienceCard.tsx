@@ -39,10 +39,6 @@ const ExperienceCard = ({ experience }: Props) => {
 
 			{/* Scrollable content wrapper */}
 			<div className="px-0 md:px-10 space-y-2">
-				{/* <div
-				className="overflow-y-auto px-0 md:px-10 mt-5 max-h-[65vh] space-y-2
-  scrollbar-thin scrollbar-track-gray-200/20 scrollbar-thumb-[#178fe6]/70 hover:scrollbar-thumb-[#178fe6] transition-all duration-200"
-			> */}
 				<h4 className="text-xl md:text-4xl font-light">
 					{experience.jobTitle}
 				</h4>
