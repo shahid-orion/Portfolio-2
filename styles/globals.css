@@ -3,12 +3,31 @@
 @tailwind utilities;
 
 @layer components {
-  .heroButton {
-    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#178fe6]/40 hover:text-[#178fe6]/40;
-  }
-  .contactInput {
-    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-400 transition-all focus:text-[#d8e8f2] hover:border-[#178fe6]/30;
-  }
+	.heroButton {
+		@apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#178fe6]/40 hover:text-[#178fe6]/40;
+	}
+	.contactInput {
+		@apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-400 transition-all focus:text-[#d8e8f2] hover:border-[#178fe6]/30;
+	}
+}
+
+/* Hide scrollbar visually */
+.scrollbar-invisible::-webkit-scrollbar {
+	width: 8px;
+	background: transparent;
+}
+.scrollbar-invisible::-webkit-scrollbar-thumb {
+	background-color: transparent;
+}
+
+/* Show scrollbar on scroll with Tailwind-style colors */
+.scrollbar-colored::-webkit-scrollbar {
+	width: 8px;
+	background-color: rgba(156, 163, 175, 0.2); /* gray-400/20 */
+}
+.scrollbar-colored::-webkit-scrollbar-thumb {
+	background-color: rgba(23, 143, 230, 0.8); /* #178fe6/80 */
+	border-radius: 9999px;
 }
 
 /* :root {

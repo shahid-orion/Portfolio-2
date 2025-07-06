@@ -36,6 +36,19 @@ function Projects({ projects }: Props) {
 		scrollToProject(prevIndex)
 	}
 
+	// Scrollbar style
+	const [isScrolling, setIsScrolling] = useState(false)
+	const summaryScrollRef = useRef<HTMLDivElement>(null)
+
+	const handleScroll = () => {
+		if (!isScrolling) setIsScrolling(true)
+
+		clearTimeout((summaryScrollRef.current as any)?._scrollTimeout)
+		;(summaryScrollRef.current as any)._scrollTimeout = setTimeout(() => {
+			setIsScrolling(false)
+		}, 1500)
+	}
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -102,9 +115,21 @@ function Projects({ projects }: Props) {
 								{project.title}
 							</h4>
 
-							<p className="text-lg md:text-2xl text-center md:text-left">
+							{/* SCROLLABLE SUMMARY */}
+							<div
+								ref={summaryScrollRef}
+								onScroll={handleScroll}
+								className={`max-h-[180px] overflow-y-auto md:max-h-none md:overflow-visible px-2 md:px-0 text-lg md:text-2xl text-center md:text-left transition-all duration-300 ${
+									isScrolling ? 'scrollbar-colored' : 'scrollbar-invisible'
+								}`}
+								// className="max-h-[180px] overflow-y-auto md:max-h-none md:overflow-visible px-2 md:px-0 text-lg md:text-2xl text-center md:text-left scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#178fe6]"
+							>
 								{project.summary}
-							</p>
+							</div>
+
+							{/* <p className="text-lg md:text-2xl text-center md:text-left">
+								{project.summary}
+							</p> */}
 						</div>
 					</motion.div>
 				))}
